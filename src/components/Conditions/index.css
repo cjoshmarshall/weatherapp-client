@@ -1,0 +1,32 @@
+.conditions-container {
+  margin: 2.5em 5em;
+  /* text-align: center; */
+}
+
+.conditions-main {
+  font-size: 3rem;
+}
+
+.conditions-temperature {
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+@media (width<770px) {
+  .conditions-container{
+    margin: 2em;
+  }
+}
+
+@media (width<700px) {
+  .conditions-container {
+    margin: 2em;
+  }
+
+  .conditions-main {
+    font-size: 2rem;
+  }
+  .conditions-temperature {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,40 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.home-subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+@media (width<1280px) {
+  .home-container {
+    height: auto;
+  }
+}
+
+@media (width<700px) {
+  .home-container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .home-subcontainer {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}

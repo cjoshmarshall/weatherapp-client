@@ -1,0 +1,152 @@
+.display-container {
+  /* width: 30%; */
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.display-subcontainer {
+  width: 400px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.display-error {
+  position: fixed;
+  color: rgb(252, 48, 48);
+  top: 0;
+  left: 10%;
+  font-style: italic;
+}
+
+.display-details-container {
+  margin: 0 2em;
+  display: flex;
+  border-bottom: 1px solid white;
+}
+
+.display-icon-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.display-form {
+  margin: 2em;
+  border: none;
+}
+
+.display-search {
+  padding: 0.5em 1em;
+  margin: 0 0.25em 0 0;
+  color: white;
+  background: inherit;
+  font-size: 1.25rem;
+  border: 1px solid white;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.display-button {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.display-search-button {
+  width: 40px;
+  height: 40px;
+}
+
+.display-rotate-button {
+  width: 30px;
+  height: 30px;
+}
+
+.display-logo-container {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.display-logo {
+  width: 5em;
+  height: 5em;
+  animation: spin 15s linear infinite;
+  animation: translate 2s infinite;
+}
+
+.display-icon {
+  width: 1.5em;
+  height: 1.5rem;
+}
+
+.display-details-container_outer {
+  margin: 2em 2em 0 2em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.display-details {
+  margin: 1em 2em;
+  width: 50%;
+}
+
+.display-country {
+  margin: 0.5em 2em;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.display-temperature-container {
+  display: flex;
+}
+
+.display-details-subcontainer {
+  margin: 1em 2em;
+  width: 50%;
+}
+
+.display-description {
+  display: block;
+  text-align: center;
+}
+
+.display-description-content {
+  padding: 1em;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (width<700px) {
+  .display-container {
+    width: 100%;
+  }
+  .display-subcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .display-error {
+    position: relative;
+    color: rgb(252, 48, 48);
+    top: auto;
+    left: auto;
+    font-style: italic;
+    text-align: center;
+  }
+}
