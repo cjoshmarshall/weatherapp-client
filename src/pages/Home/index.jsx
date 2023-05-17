@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./index.css";
-import axios from "axios";
 
 import Timezone from "../../components/Timezone";
 import Display from "../../components/Display";
 import Conditions from "../../components/Conditions";
 import WeatherContext from "../../context/WeatherProvider";
 import Loader from "../../components/Loader";
+import { bodyRequest } from "../../api/axios";
 
 const sunnyImage = require("../../assets/images/sunny.jpg");
 const rainyImage = require("../../assets/images/rainy.jpg");
@@ -36,9 +36,7 @@ function Home() {
     let initialCity = region[region.length - 1];
     const intialCity = async () => {
       try {
-        const res = await axios.get(
-          `http://localhost:3006/api/weather/${initialCity}`
-        );
+        const res = await bodyRequest.get(`/weather/${initialCity}`);
         setWeather(res.data);
       } catch (err) {
         console.log(err);

@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./index.css";
-import axios from "axios";
 import WeatherContext from "../../context/WeatherProvider";
 import { FaSearch } from "react-icons/fa";
-import { FiRotateCw } from "react-icons/fi";
 import { celsius, fahrenheit, kelvin } from "../../utils/temperature";
+import { bodyRequest } from "../../api/axios";
 
 function Display() {
   const [city, setCity] = useState("");
@@ -26,7 +25,7 @@ function Display() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:3006/api/weather/${city}`);
+      const res = await bodyRequest.get(`/weather/${city}`);
       if (res.data?.message !== "city not found") return setWeather(res.data);
       setError("Please Check City");
     } catch (err) {
